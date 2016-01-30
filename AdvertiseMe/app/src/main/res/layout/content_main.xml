@@ -137,5 +137,6 @@
         android:layout_below="@+id/editText_price"
         android:layout_alignRight="@+id/editText_price"
         android:layout_alignEnd="@+id/editText_price"
+        android:onClick="saveAdvertisement"
         android:layout_marginTop="79dp" />
 </RelativeLayout>

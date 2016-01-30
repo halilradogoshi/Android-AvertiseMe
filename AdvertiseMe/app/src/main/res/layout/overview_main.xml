@@ -87,7 +87,7 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_title"
+        android:id="@+id/editText_title2"
         android:editable="true"
         android:layout_above="@+id/label_name"
         android:layout_toRightOf="@+id/textView_title"
@@ -96,7 +96,7 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_name"
+        android:id="@+id/editText_name2"
         android:editable="true"
         android:layout_alignBottom="@+id/label_name"
         android:layout_alignLeft="@+id/textView_title"
@@ -105,7 +105,7 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_text"
+        android:id="@+id/editText_text2"
         android:editable="true"
         android:layout_alignBottom="@+id/label_text"
         android:layout_toRightOf="@+id/textView_title"
@@ -114,7 +114,7 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_phone"
+        android:id="@+id/editText_phone2"
         android:editable="true"
         android:layout_alignBottom="@+id/label_phone"
         android:layout_toRightOf="@+id/textView_title"
@@ -123,7 +123,7 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_price"
+        android:id="@+id/editText_price2"
         android:editable="true"
         android:layout_alignBottom="@+id/label_price"
         android:layout_toRightOf="@+id/textView_title"
@@ -134,8 +134,9 @@
         android:layout_height="wrap_content"
         android:text="@string/label_button_callMe"
         android:id="@+id/btn_callMe"
-        android:layout_below="@+id/editText_price"
-        android:layout_alignRight="@+id/editText_price"
-        android:layout_alignEnd="@+id/editText_price"
-        android:layout_marginTop="79dp" />
+        android:layout_below="@+id/editText_price2"
+        android:layout_alignRight="@+id/editText_price2"
+        android:layout_alignEnd="@+id/editText_price2"
+        android:layout_marginTop="79dp"
+        android:onClick="callMe" />
 </RelativeLayout>
