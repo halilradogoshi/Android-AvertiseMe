@@ -8,4 +8,6 @@
     <string name="label_phone">Phone</string>
     <string name="label_price">Price</string>
     <string name="label_button">Next view</string>
+    <string name="label_button_callMe">Call me</string>
+    <string name="label_description">This is your ad:</string>
 </resources>
