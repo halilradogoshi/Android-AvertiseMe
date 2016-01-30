@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AdvertiseMe</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_instruction_text">Put your ad here </string>
+    <string name="label_title">Title</string>
+    <string name="label_name">Name</string>
+    <string name="label_text">Text</string>
+    <string name="label_phone">Phone</string>
+    <string name="label_price">Price</string>
+    <string name="label_button">Next view</string>
 </resources>
