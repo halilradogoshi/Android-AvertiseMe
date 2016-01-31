@@ -10,9 +10,9 @@
 
     <include layout="@layout/content_main"
         android:id="@+id/layout_content"
-        android:visibility="gone"/>
+        android:visibility="visible"/>
     <include layout="@layout/overview_main"
         android:id="@+id/layout_overview"
-        android:visibility="visible"/>
+        android:visibility="gone"/>
 
 </android.support.design.widget.CoordinatorLayout>
