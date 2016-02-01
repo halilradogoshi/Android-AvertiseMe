@@ -43,8 +43,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
+
     }
 
     @Override
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Method to save data and switch between the visibility of layouts
-    private void saveAdvertisement(){
+    public void saveAdvertisement(View view){
 
 
         //Switch the visibility of layouts
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Method to make the phone call. Do not forget to add the permission to call on the manifest
-    private void callMe(View view){
+    public void callMe(View view){
         //Get the phone number from the relevant field on the overview_main
         String phoneNumber = findViewById(R.id.editText_phone2).toString().replace("-","");         //remove possible minus signs from the string
 
@@ -79,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Method to read the data
-        private void readAdvertisement(View view){
+        public void readAdvertisement(View view){
 
 
 
