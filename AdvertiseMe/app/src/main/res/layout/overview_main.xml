@@ -91,7 +91,8 @@
         android:editable="true"
         android:layout_above="@+id/label_name"
         android:layout_toRightOf="@+id/textView_title"
-        android:layout_toEndOf="@+id/textView_title" />
+        android:layout_toEndOf="@+id/textView_title"
+        />
 
     <EditText
         android:layout_width="300dp"

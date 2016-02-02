@@ -1,5 +1,6 @@
 package com.dovelaqm.advertiseme;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.net.URI;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Declare the EditText fields and SharePreferences
 
+    TextView label_title;
     EditText editText_title;
     EditText editText_title2;
     EditText editText_name;
@@ -38,13 +41,35 @@ public class MainActivity extends AppCompatActivity {
     public static final String PHONE = "phoneKey";
     public static final String PRICE = "priceKey";
 
+    SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sharedPreferences = getSharedPreferences(MY_PREFERENCES, Context.MODE_PRIVATE);
+        editText_title =(EditText)findViewById(R.id.editText_text);
+
+        //Point to relevant EditText fields
+       /* editText_title2 =(EditText)findViewById(R.id.editText_text2);
+        editText_name2=(EditText)findViewById(R.id.editText_name2);
+        editText_text2=(EditText)findViewById(R.id.editText_text2);
+        editText_phone2=(EditText)findViewById(R.id.editText_phone2);
+        editText_price2=(EditText)findViewById(R.id.editText_price2);*/
+
+       // String tValue = sharedPreferences.getString(TITLE,"");
+
+        //If saved then display text otherwise display null
+      // editText_title2.setText(tValue);
+        /* editText_name2.setText(sharedPreferences.getString(NAME, null));
+        editText_text2.setText(sharedPreferences.getString(TEXT, null));
+        editText_phone2.setText(sharedPreferences.getString(PHONE, null));
+        editText_price2.setText(sharedPreferences.getString(PRICE, null));*/
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -56,16 +81,40 @@ public class MainActivity extends AppCompatActivity {
     //Method to save data and switch between the visibility of layouts
     public void saveAdvertisement(View view){
 
+        //Start the editor
+        SharedPreferences.Editor formEditor = sharedPreferences.edit();
+        String t = editText_title.getText().toString();
 
+        //Declare which data is to be saved
+        formEditor.putString(TITLE, t);
+       /* formEditor.putString(NAME,findViewById(R.id.editText_name).toString());
+        formEditor.putString(TEXT,findViewById(R.id.editText_text).toString());
+        formEditor.putString(PHONE,findViewById(R.id.editText_phone).toString());
+        formEditor.putString(PRICE,findViewById(R.id.editText_price).toString());*/
+
+        //Save data
+        formEditor.commit();
+
+        //Notify that the data was saves
+        Toast.makeText(MainActivity.this, "The data was saved!", Toast.LENGTH_LONG).show();
+
+
+        SharedPreferences savedPreferences = sharedPreferences;
+
+        String tV = savedPreferences.getString(TITLE,"");
         //Switch the visibility of layouts
         findViewById(R.id.layout_content).setVisibility(View.GONE);
         findViewById(R.id.layout_overview).setVisibility(View.VISIBLE);
+
+        label_title =(TextView)findViewById(R.id.editText_title2);
+        label_title.setText(tV);
+
     }
 
     //Method to make the phone call. Do not forget to add the permission to call on the manifest
     public void callMe(View view){
         //Get the phone number from the relevant field on the overview_main
-        String phoneNumber = findViewById(R.id.editText_phone2).toString().replace("-","");         //remove possible minus signs from the string
+        String phoneNumber = findViewById(R.id.editText_phone2).toString();         //remove possible minus signs from the string
 
         //Start the phone activity
         Intent phoneIntent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber));
