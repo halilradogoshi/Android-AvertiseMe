@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Adveritisig App</string>
+    <string name="edtTitle_text">Title</string>
+    <string name="btnNextView_text">Next view</string>
+    <string name="btnCall_text">Call</string>
+    <string name="lblName_text">Name</string>
+    <string name="lblText_text">Text</string>
+    <string name="lblPhone_text">Phone</string>
+    <string name="lblPrice_text">Price</string>
+
+
+</resources>

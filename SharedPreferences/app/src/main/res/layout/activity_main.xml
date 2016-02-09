@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BBDEFB"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.dovelaqm.sharedpreferences.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edtTitle_text"
+        android:layout_marginTop="30dp"
+        android:id="@+id/lblTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtTitle"
+        android:layout_alignBottom="@+id/lblTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblName_text"
+        android:id="@+id/lblNamn"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/lblTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtName"
+        android:layout_alignBottom="@+id/lblNamn"
+        android:layout_alignLeft="@+id/edtTitle"
+        android:layout_alignStart="@+id/edtTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblText_text"
+        android:id="@+id/lblText"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/lblNamn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtText"
+        android:layout_alignBottom="@+id/lblText"
+        android:layout_alignLeft="@+id/edtName"
+        android:layout_alignStart="@+id/edtName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblPhone_text"
+        android:id="@+id/lblPhone"
+        android:layout_below="@+id/lblText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtPhone"
+        android:layout_alignBottom="@+id/lblPhone"
+        android:layout_alignLeft="@+id/edtText"
+        android:layout_alignStart="@+id/edtText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblPrice_text"
+        android:id="@+id/lblPrice"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/lblPhone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtPrice"
+        android:layout_alignBottom="@+id/lblPrice"
+        android:layout_alignLeft="@+id/edtPhone"
+        android:layout_alignStart="@+id/edtPhone" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnNextView_text"
+        android:id="@+id/btnSave"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp" />
+
+</RelativeLayout>
