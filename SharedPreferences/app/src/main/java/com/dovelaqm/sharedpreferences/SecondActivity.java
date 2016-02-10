@@ -44,9 +44,9 @@ public class SecondActivity extends AppCompatActivity {
     callIntent.setData(Uri.parse("tel:738220096"));*/
 
     public void callZeNumber(View view) {
-        String phoneNumber = edtPhone.toString();
-        Intent callIntent=new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse(phoneNumber));
+        String phoneNumber = edtPhone.getText().toString();
+        Intent callIntent=new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:"+phoneNumber));
         try{
             startActivity(callIntent);
         }
